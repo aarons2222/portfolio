@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Strickland | Mobile Developer</title>
+    <meta name="description" content="Mobile Developer specialising in native iOS and Android apps. Creator of Ordernise, Powerful Reports, and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">AS</a>
+            <a href="#" class="nav-logo">AS.</a>
             <div class="nav-links">
-                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
@@ -30,7 +30,6 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -39,104 +38,131 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <p class="hero-greeting">Hello, I'm</p>
+            <div class="hero-badge">
+                <span>Available for opportunities</span>
+            </div>
             <h1 class="hero-name">Aaron Strickland</h1>
-            <p class="hero-title">Mobile Developer</p>
-            <p class="hero-subtitle">Crafting native iOS & Android experiences</p>
+            <p class="hero-title">Mobile Developer — <span>iOS & Android</span></p>
+            <p class="hero-subtitle">Building native apps that people love. From concept to App Store, I craft polished mobile experiences.</p>
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
-        </div>
-        <div class="hero-visual">
-            <div class="phone-mockup">
-                <div class="phone-screen"></div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">5+</div>
+                    <div class="stat-label">Apps Shipped</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Platforms</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">5★</div>
+                    <div class="stat-label">App Ratings</div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>I'm a passionate mobile developer with expertise in building high-quality native applications for both iOS and Android platforms. I focus on creating intuitive, performant apps that solve real problems and deliver exceptional user experiences.</p>
-                <p>With a strong foundation in software engineering and a keen eye for detail, I take pride in writing clean, maintainable code and staying current with the latest mobile development trends and best practices.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A selection of apps I've designed and built</p>
+            </div>
+            
             <div class="projects-grid">
                 
                 <!-- Ordernise -->
                 <article class="project-card">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                        </svg>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Ordernise</h3>
+                            <span class="project-type">Sales Management</span>
+                        </div>
                     </div>
-                    <h3 class="project-title">Ordernise</h3>
-                    <p class="project-description">A sales management app for online sellers on eBay, Etsy, Amazon, and Depop. Track orders, stock levels, and profits in one place with list or calendar views, CSV export, and iCloud sync across iPhone, iPad, Mac, and Apple Vision.</p>
+                    <p class="project-description">A sales management app for online sellers on eBay, Etsy, Amazon, and Depop. Track orders, stock levels, and profits with iCloud sync across all Apple devices.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>SwiftUI</span>
                         <span>CloudKit</span>
                         <span>StoreKit 2</span>
                     </div>
-                    <div class="project-platforms">
-                        <span class="platform ios">iOS</span>
-                        <span class="platform ios">iPadOS</span>
-                        <span class="platform ios">macOS</span>
-                        <span class="platform ios">visionOS</span>
+                    <div class="project-footer">
+                        <div class="project-platforms">
+                            <span class="platform ios">iOS</span>
+                            <span class="platform ios">iPadOS</span>
+                            <span class="platform ios">macOS</span>
+                        </div>
+                        <a href="https://apps.apple.com/gb/app/ordernise-sales-manager/id6751537093" target="_blank" class="project-link">App Store</a>
                     </div>
-                    <a href="https://apps.apple.com/gb/app/ordernise-sales-manager/id6751537093" target="_blank" class="project-link">View on App Store →</a>
                 </article>
 
                 <!-- Powerful Reports -->
                 <article class="project-card">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Powerful Reports</h3>
+                            <span class="project-type">Analytics & Insights</span>
+                        </div>
                     </div>
-                    <h3 class="project-title">Powerful Reports</h3>
-                    <p class="project-description">An Ofsted insights app for early years professionals, managers, and consultants. Analyses inspection reports to identify trends, provides inspector information and gradings, and helps settings track updates in their local area — transforming hours of research into minutes.</p>
+                    <p class="project-description">An Ofsted insights app for early years professionals. Analyses inspection reports to identify trends, inspector patterns, and helps settings improve their practice.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>Kotlin</span>
                         <span>SwiftUI</span>
                         <span>Jetpack Compose</span>
                     </div>
-                    <div class="project-platforms">
-                        <span class="platform ios">iOS</span>
-                        <span class="platform android">Android</span>
+                    <div class="project-footer">
+                        <div class="project-platforms">
+                            <span class="platform ios">iOS</span>
+                            <span class="platform android">Android</span>
+                        </div>
+                        <a href="https://apps.apple.com/gb/app/powerful-reports/id6738889825" target="_blank" class="project-link">App Store</a>
                     </div>
-                    <a href="https://apps.apple.com/gb/app/powerful-reports/id6738889825" target="_blank" class="project-link">View on App Store →</a>
                 </article>
 
                 <!-- eLOQ -->
                 <article class="project-card">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0110 0v4"/>
-                        </svg>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">eLOQ</h3>
+                            <span class="project-type">Smart Access Control</span>
+                        </div>
                     </div>
-                    <h3 class="project-title">eLOQ</h3>
-                    <p class="project-description">A BLE smart key management app built for a client. Native iOS and Android apps allow users to program and configure smart locks via Bluetooth, with QR code provisioning and encrypted key writing for secure access control systems.</p>
+                    <p class="project-description">A BLE smart key management app built for a client. Programs and configures smart locks via Bluetooth with QR provisioning and encrypted key writing.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>Kotlin</span>
-                        <span>BLE</span>
                         <span>Core Bluetooth</span>
+                        <span>BLE</span>
                     </div>
-                    <div class="project-platforms">
-                        <span class="platform ios">iOS</span>
-                        <span class="platform android">Android</span>
+                    <div class="project-footer">
+                        <div class="project-platforms">
+                            <span class="platform ios">iOS</span>
+                            <span class="platform android">Android</span>
+                        </div>
+                        <span class="project-link" style="color: var(--text-muted);">Client Project</span>
                     </div>
                 </article>
 
@@ -147,7 +173,12 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-header">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies I work with daily</p>
+            </div>
+            
             <div class="skills-grid">
                 
                 <div class="skill-category">
@@ -158,11 +189,11 @@
                     </div>
                     <h3>iOS Development</h3>
                     <ul class="skill-list">
-                        <li>Swift & Objective-C</li>
-                        <li>SwiftUI & UIKit</li>
+                        <li>Swift & SwiftUI</li>
+                        <li>UIKit & Storyboards</li>
                         <li>Core Data & CloudKit</li>
-                        <li>Combine & async/await</li>
-                        <li>App Store deployment</li>
+                        <li>StoreKit 2 & IAP</li>
+                        <li>App Store Connect</li>
                     </ul>
                 </div>
 
@@ -178,7 +209,7 @@
                         <li>Jetpack Compose</li>
                         <li>Android Architecture</li>
                         <li>Room & Retrofit</li>
-                        <li>Play Store deployment</li>
+                        <li>Play Store Console</li>
                     </ul>
                 </div>
 
@@ -188,13 +219,13 @@
                             <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
                         </svg>
                     </div>
-                    <h3>Tools & Practices</h3>
+                    <h3>Tools & Backend</h3>
                     <ul class="skill-list">
                         <li>Git & GitHub</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>REST APIs & GraphQL</li>
+                        <li>REST APIs & JSON</li>
                         <li>Firebase & Supabase</li>
-                        <li>Agile & Scrum</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Xcode & Android Studio</li>
                     </ul>
                 </div>
 
@@ -205,15 +236,18 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-intro">Interested in working together? I'd love to hear from you.</p>
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <p class="contact-intro">Interested in collaborating or have a project in mind? I'd love to hear from you.</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Aaron Strickland. All rights reserved.</p>
+            <p>© 2026 Aaron Strickland. Built with passion.</p>
         </div>
     </footer>
 
