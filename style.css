@@ -485,6 +485,14 @@ section {
     color: white;
 }
 
+.project-icon-img {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
 .project-info {
     flex: 1;
 }
