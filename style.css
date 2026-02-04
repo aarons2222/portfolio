@@ -637,14 +637,14 @@ body {
 /* ===== Responsive ===== */
 @media (min-width: 768px) {
     .hero-content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr auto;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
+        gap: 80px;
     }
     
     .hero-phones {
         display: block;
-        justify-self: center;
     }
     
     .project {
