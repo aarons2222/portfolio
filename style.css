@@ -278,8 +278,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 15px 0;
+    padding-top: 10px;
 }
 
 .phone-single .phone-notch {
@@ -308,10 +307,10 @@ body {
 .phone-homescreen {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 0 15px;
+    gap: 18px 12px;
+    padding: 15px 12px;
     justify-items: center;
-    align-content: center;
+    align-content: start;
     background: transparent;
 }
 
