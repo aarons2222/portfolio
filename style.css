@@ -638,12 +638,13 @@ body {
 @media (min-width: 768px) {
     .hero-content {
         grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
     }
     
     .hero-phones {
         display: block;
-        justify-self: end;
-        padding-right: 20px;
+        justify-self: center;
     }
     
     .project {
