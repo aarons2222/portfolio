@@ -650,6 +650,8 @@ body {
     .project {
         grid-template-columns: 1fr 1fr;
         text-align: left;
+        max-width: 1000px;
+        margin: 0 auto;
     }
     
     .project-content {
