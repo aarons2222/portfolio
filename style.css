@@ -249,40 +249,68 @@ body {
 .hero-phones {
     display: none;
     position: relative;
-    height: 500px;
+    height: 400px;
+    width: 520px;
 }
 
 .phone {
     position: absolute;
-    width: 220px;
-    height: 450px;
+    width: 140px;
+    height: 280px;
     background: #1a1a1a;
-    border-radius: 40px;
-    border: 3px solid #333;
-    padding: 12px;
-    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+    border-radius: 28px;
+    border: 2px solid #333;
+    padding: 8px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.phone:hover {
+    transform: translateY(-10px) scale(1.05) !important;
+    z-index: 10 !important;
 }
 
 .phone-1 {
     left: 0;
-    top: 0;
+    top: 80px;
+    transform: rotate(-12deg);
+    z-index: 1;
+}
+
+.phone-2 {
+    left: 90px;
+    top: 40px;
     transform: rotate(-6deg);
     z-index: 2;
 }
 
-.phone-2 {
-    left: 140px;
+.phone-3 {
+    left: 180px;
+    top: 20px;
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+.phone-4 {
+    left: 270px;
     top: 40px;
     transform: rotate(6deg);
+    z-index: 2;
+}
+
+.phone-5 {
+    left: 360px;
+    top: 80px;
+    transform: rotate(12deg);
     z-index: 1;
 }
 
 .phone-notch {
-    width: 100px;
-    height: 28px;
+    width: 60px;
+    height: 18px;
     background: #000;
-    border-radius: 20px;
-    margin: 0 auto 20px;
+    border-radius: 12px;
+    margin: 0 auto 12px;
 }
 
 .phone-app {
@@ -677,10 +705,46 @@ body {
     border: 1px solid rgba(236, 72, 153, 0.3);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
+    .hero-phones {
+        width: 620px;
+        height: 450px;
+    }
+    
     .hero-phones .phone {
-        width: 180px;
-        height: 360px;
+        width: 160px;
+        height: 320px;
+        border-radius: 32px;
+    }
+    
+    .hero-phones .phone-1 {
+        left: 0;
+        top: 90px;
+    }
+    
+    .hero-phones .phone-2 {
+        left: 110px;
+        top: 45px;
+    }
+    
+    .hero-phones .phone-3 {
+        left: 220px;
+        top: 20px;
+    }
+    
+    .hero-phones .phone-4 {
+        left: 330px;
+        top: 45px;
+    }
+    
+    .hero-phones .phone-5 {
+        left: 440px;
+        top: 90px;
+    }
+    
+    .hero-phones .phone-notch {
+        width: 70px;
+        height: 20px;
     }
     
     .hero-phones .phone-app {
