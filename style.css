@@ -278,6 +278,8 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 15px 0;
 }
 
 .phone-single .phone-notch {
@@ -311,9 +313,6 @@ body {
     justify-items: center;
     align-content: center;
     background: transparent;
-    position: relative;
-    z-index: 1;
-    flex: 1;
 }
 
 .app-icon {
