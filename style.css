@@ -276,7 +276,7 @@ body {
 
 .phone-dock {
     position: absolute;
-    bottom: 4%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
     width: 75%;
