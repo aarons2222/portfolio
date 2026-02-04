@@ -282,14 +282,13 @@ body {
 }
 
 .phone-single .phone-notch {
-    width: 90px;
-    height: 28px;
+    width: 85px;
+    height: 26px;
     background: #000;
-    border-radius: 20px;
-    margin: 0 auto 20px;
+    border-radius: 18px;
+    margin: 0 auto 12px;
     position: relative;
     z-index: 2;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.3);
 }
 
 /* Side button */
@@ -306,9 +305,9 @@ body {
 
 .phone-homescreen {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px 12px;
-    padding: 15px 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px 8px;
+    padding: 12px 8px;
     justify-items: center;
     align-content: start;
     background: transparent;
@@ -327,17 +326,17 @@ body {
 }
 
 .app-icon img {
-    width: 60px;
-    height: 60px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 48px;
+    height: 48px;
+    border-radius: 11px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .app-icon span {
-    font-size: 10px;
+    font-size: 8px;
     color: rgba(255,255,255,0.9);
     text-align: center;
-    max-width: 80px;
+    max-width: 55px;
     line-height: 1.2;
 }
 
@@ -748,13 +747,13 @@ body {
     }
     
     .app-icon img {
-        width: 70px;
-        height: 70px;
-        border-radius: 16px;
+        width: 54px;
+        height: 54px;
+        border-radius: 12px;
     }
     
     .app-icon span {
-        font-size: 11px;
+        font-size: 9px;
     }
     
     .phone-homescreen {
