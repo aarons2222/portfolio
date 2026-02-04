@@ -275,8 +275,9 @@ body {
         radial-gradient(circle at 90% 30%, rgba(236, 72, 153, 0.4) 0%, transparent 35%),
         linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #1e3a5f 50%, #0f172a 100%);
     border-radius: 33px;
-    padding: 8px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .phone-single .phone-notch {
@@ -305,12 +306,14 @@ body {
 .phone-homescreen {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px 10px;
+    gap: 16px;
+    padding: 30px 15px;
     justify-items: center;
+    align-content: center;
     background: transparent;
     position: relative;
     z-index: 1;
+    height: 100%;
 }
 
 .app-icon {
