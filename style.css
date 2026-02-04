@@ -651,7 +651,7 @@ body {
         grid-template-columns: auto auto;
         text-align: left;
         justify-content: center;
-        gap: 60px;
+        gap: 100px;
     }
     
     .project-content {
