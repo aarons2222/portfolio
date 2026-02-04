@@ -249,76 +249,62 @@ body {
 .hero-phones {
     display: none;
     position: relative;
-    height: 400px;
-    width: 520px;
 }
 
-.phone {
-    position: absolute;
-    width: 140px;
-    height: 280px;
-    background: #1a1a1a;
-    border-radius: 28px;
-    border: 2px solid #333;
-    padding: 8px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, z-index 0.3s ease;
+.phone-single {
+    width: 280px;
+    height: 560px;
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 45px;
+    border: 4px solid #333;
+    padding: 15px;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.5), inset 0 0 30px rgba(255,255,255,0.05);
+    transform: rotate(3deg);
 }
 
-.phone:hover {
-    transform: translateY(-10px) scale(1.05) !important;
-    z-index: 10 !important;
-}
-
-.phone-1 {
-    left: 0;
-    top: 80px;
-    transform: rotate(-12deg);
-    z-index: 1;
-}
-
-.phone-2 {
-    left: 90px;
-    top: 40px;
-    transform: rotate(-6deg);
-    z-index: 2;
-}
-
-.phone-3 {
-    left: 180px;
-    top: 20px;
-    transform: rotate(0deg);
-    z-index: 3;
-}
-
-.phone-4 {
-    left: 270px;
-    top: 40px;
-    transform: rotate(6deg);
-    z-index: 2;
-}
-
-.phone-5 {
-    left: 360px;
-    top: 80px;
-    transform: rotate(12deg);
-    z-index: 1;
-}
-
-.phone-notch {
-    width: 60px;
-    height: 18px;
+.phone-single .phone-notch {
+    width: 100px;
+    height: 30px;
     background: #000;
-    border-radius: 12px;
-    margin: 0 auto 12px;
+    border-radius: 20px;
+    margin: 0 auto 30px;
 }
 
-.phone-app {
-    width: 60%;
-    height: auto;
-    border-radius: 20px;
-    margin: auto;
-    display: block;
+.phone-homescreen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 10px;
+    justify-items: center;
+}
+
+.app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s ease;
+}
+
+.app-icon:hover {
+    transform: scale(1.1);
+}
+
+.app-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.app-icon span {
+    font-size: 11px;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* ===== Work Section ===== */
@@ -706,48 +692,29 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .hero-phones {
-        width: 620px;
-        height: 450px;
+    .phone-single {
+        width: 320px;
+        height: 640px;
+        border-radius: 50px;
     }
     
-    .hero-phones .phone {
-        width: 160px;
-        height: 320px;
-        border-radius: 32px;
+    .phone-single .phone-notch {
+        width: 110px;
+        height: 32px;
     }
     
-    .hero-phones .phone-1 {
-        left: 0;
-        top: 90px;
-    }
-    
-    .hero-phones .phone-2 {
-        left: 110px;
-        top: 45px;
-    }
-    
-    .hero-phones .phone-3 {
-        left: 220px;
-        top: 20px;
-    }
-    
-    .hero-phones .phone-4 {
-        left: 330px;
-        top: 45px;
-    }
-    
-    .hero-phones .phone-5 {
-        left: 440px;
-        top: 90px;
-    }
-    
-    .hero-phones .phone-notch {
+    .app-icon img {
         width: 70px;
-        height: 20px;
+        height: 70px;
+        border-radius: 16px;
     }
     
-    .hero-phones .phone-app {
-        width: 55%;
+    .app-icon span {
+        font-size: 12px;
+    }
+    
+    .phone-homescreen {
+        gap: 24px;
+        padding: 25px 15px;
     }
 }
