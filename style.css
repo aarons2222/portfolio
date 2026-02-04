@@ -648,14 +648,15 @@ body {
     }
     
     .project {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         text-align: left;
-        max-width: 1000px;
-        margin: 0 auto;
+        justify-content: center;
+        gap: 60px;
     }
     
     .project-content {
         text-align: left;
+        max-width: 450px;
     }
     
     .project-badges,
