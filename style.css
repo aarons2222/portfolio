@@ -642,6 +642,8 @@ body {
     
     .hero-phones {
         display: block;
+        justify-self: end;
+        padding-right: 20px;
     }
     
     .project {
