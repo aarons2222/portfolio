@@ -274,10 +274,10 @@ body {
     right: 12px;
     bottom: 12px;
     background: 
-        radial-gradient(ellipse at 30% 0%, rgba(139, 92, 246, 0.4) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 100%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at 100% 50%, rgba(236, 72, 153, 0.2) 0%, transparent 40%),
-        linear-gradient(160deg, #1a1a2e 0%, #0f172a 50%, #1e1b4b 100%);
+        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.6) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.5) 0%, transparent 40%),
+        radial-gradient(circle at 90% 30%, rgba(236, 72, 153, 0.4) 0%, transparent 35%),
+        linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #1e3a5f 50%, #0f172a 100%);
     border-radius: 33px;
     z-index: 0;
 }
@@ -317,6 +317,9 @@ body {
     gap: 20px;
     padding: 20px 10px;
     justify-items: center;
+    background: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 .app-icon {
