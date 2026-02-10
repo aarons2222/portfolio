@@ -4,10 +4,11 @@
 
 // Typing animation
 const lines = [
-    'swift build --release',
-    'git push origin main',
-    'xcrun simctl boot iPhone',
-    'fastlane deliver --submit'
+    'whoami → Aaron Strickland',
+    'location → Lincoln, UK',
+    'role → Mobile Developer',
+    'stack → Swift · Kotlin · React Native',
+    'apps shipped → 5+'
 ];
 
 const typedEl = document.getElementById('typed');
