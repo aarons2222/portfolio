@@ -28,7 +28,7 @@ function typeLoop() {
             pauseTimer = setTimeout(typeLoop, 2500);
             return;
         }
-        pauseTimer = setTimeout(typeLoop, 40 + Math.random() * 40);
+        pauseTimer = setTimeout(typeLoop, 70 + Math.random() * 50);
     } else {
         typedEl.textContent = currentLine.substring(0, charIndex - 1);
         charIndex--;

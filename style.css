@@ -92,7 +92,7 @@ img { max-width: 100%; display: block; }
 
 .hero-terminal {
     max-width: 600px;
-    min-height: 120px;
+    height: 130px;
     margin-bottom: 3rem;
     border: 1px solid var(--border);
     border-radius: 8px;
