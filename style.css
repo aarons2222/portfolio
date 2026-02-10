@@ -191,6 +191,20 @@ img { max-width: 100%; display: block; }
     transition: transform 0.3s;
 }
 .hero-cta:hover .arrow { transform: translateY(3px); }
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.hero-cta-outline {
+    color: var(--text-dim);
+    border-color: var(--border);
+}
+.hero-cta-outline:hover {
+    background: var(--text-dim);
+    color: var(--bg);
+    border-color: var(--text-dim);
+}
 
 /* ============================================
    SECTION COMMON
