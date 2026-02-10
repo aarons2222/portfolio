@@ -45,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements with stagger for grid items
 function initAnimations() {
     // Single elements
-    document.querySelectorAll('.project, .contact-card, .about-content, .section-title').forEach(el => {
+    document.querySelectorAll('.project, .contact-card, .about-content, .section-title, .oss-card').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
