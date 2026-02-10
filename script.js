@@ -1,64 +1,86 @@
-// Navbar scroll effect
-const nav = document.querySelector('.nav');
+/* ============================================
+   AARON STRICKLAND — PORTFOLIO JS
+   ============================================ */
 
-if (nav) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
-            nav.style.background = 'rgba(17, 17, 17, 0.95)';
-        } else {
-            nav.style.boxShadow = 'none';
-            nav.style.background = 'rgba(17, 17, 17, 0.8)';
+// Typing animation
+const lines = [
+    'aaron.strickland --role mobile-dev --location lincoln-uk',
+    'cat skills.txt | grep "weird things"',
+    'swift build --configuration release',
+    'deploying apps that shouldn\'t exist...'
+];
+
+const typedEl = document.getElementById('typed');
+let lineIndex = 0;
+let charIndex = 0;
+let deleting = false;
+let pauseTimer = 0;
+
+function typeLoop() {
+    const currentLine = lines[lineIndex];
+    
+    if (!deleting) {
+        typedEl.textContent = currentLine.substring(0, charIndex + 1);
+        charIndex++;
+        
+        if (charIndex === currentLine.length) {
+            deleting = true;
+            pauseTimer = setTimeout(typeLoop, 2500);
+            return;
         }
-    });
+        pauseTimer = setTimeout(typeLoop, 40 + Math.random() * 40);
+    } else {
+        typedEl.textContent = currentLine.substring(0, charIndex - 1);
+        charIndex--;
+        
+        if (charIndex === 0) {
+            deleting = false;
+            lineIndex = (lineIndex + 1) % lines.length;
+            pauseTimer = setTimeout(typeLoop, 500);
+            return;
+        }
+        pauseTimer = setTimeout(typeLoop, 20);
+    }
 }
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href === '#') return;
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-            const offset = 80;
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-        }
-    });
-});
+// Start typing after a short delay
+setTimeout(typeLoop, 800);
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
+// Intersection Observer for reveal animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
 
-// Observe elements with stagger for grid items
-function initAnimations() {
-    // Single elements
-    document.querySelectorAll('.project, .contact-card, .about-content, .section-title, .oss-card').forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
+document.querySelectorAll('.reveal, .reveal-delay, .reveal-delay-2, .reveal-up').forEach(el => {
+    observer.observe(el);
+});
+
+// Smooth active nav link
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + 200;
+    
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        
+        if (scrollY >= top && scrollY < top + height) {
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.style.color = 'var(--accent)';
+                }
+            });
+        }
     });
-
-    // Grid items with stagger
-    document.querySelectorAll('.skills-grid, .mobile-app-strip').forEach(grid => {
-        const items = grid.children;
-        Array.from(items).forEach((item, i) => {
-            item.classList.add('fade-in');
-            item.style.transitionDelay = `${i * 0.1}s`;
-            observer.observe(item);
-        });
-    });
-}
-
-initAnimations();
+}, { passive: true });
