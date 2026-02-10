@@ -4,10 +4,10 @@
 
 // Typing animation
 const lines = [
-    'aaron --role mobile-dev',
-    'cat skills.txt | grep "weird"',
     'swift build --release',
-    'deploying weird apps...'
+    'git push origin main',
+    'xcrun simctl boot iPhone',
+    'fastlane deliver --submit'
 ];
 
 const typedEl = document.getElementById('typed');
