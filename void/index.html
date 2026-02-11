@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V0ID — Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --dim: #666666;
+            --border: #1a1a1a;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 640px;
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo span {
+            color: var(--dim);
+        }
+        
+        .tagline {
+            text-align: center;
+            color: var(--dim);
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 4rem;
+        }
+        
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        p {
+            color: var(--dim);
+            margin-bottom: 1rem;
+            font-size: 0.9375rem;
+        }
+        
+        a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        
+        a:hover {
+            color: var(--dim);
+        }
+        
+        .faq {
+            margin-top: 3rem;
+        }
+        
+        .faq-item {
+            border-top: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .faq-q {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9375rem;
+        }
+        
+        .faq-a {
+            color: var(--dim);
+            font-size: 0.875rem;
+        }
+        
+        .contact-box {
+            margin-top: 3rem;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-box p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-box a {
+            font-size: 1rem;
+        }
+        
+        .footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--dim);
+            font-size: 0.75rem;
+        }
+        
+        .footer a {
+            color: var(--dim);
+        }
+        
+        .privacy {
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">V<span>0</span>ID</div>
+        <p class="tagline">SUBSCRIBE TO NOTHING</p>
+        
+        <h2>Support</h2>
+        <p>Having an issue with V0ID? You've come to the right place. Although, to be fair, there's not much that can go wrong with nothing.</p>
+        
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-q">The app isn't doing anything.</div>
+                <div class="faq-a">That's correct. That's the entire point.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">I subscribed and nothing happened.</div>
+                <div class="faq-a">Congratulations. You're getting exactly what you paid for.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How do I cancel my subscription?</div>
+                <div class="faq-a">Settings → Apple ID → Subscriptions → V0ID → Cancel. We won't try to guilt-trip you. The void doesn't care.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">I want a refund.</div>
+                <div class="faq-a">Refunds are handled by Apple. Go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Try explaining to them that you want a refund for nothing.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is my data being collected?</div>
+                <div class="faq-a">No. V0ID collects nothing. Stores nothing. Tracks nothing. We don't even know you exist.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">The waste tracker says I've wasted money. Is that accurate?</div>
+                <div class="faq-a">Painfully so.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Does V0ID work offline?</div>
+                <div class="faq-a">V0ID does nothing online. It also does nothing offline. It's remarkably consistent.</div>
+            </div>
+        </div>
+        
+        <div class="privacy" id="privacy">
+            <h2>Privacy Policy</h2>
+            <p>V0ID does not collect, store, or transmit any personal data. No analytics. No tracking. No telemetry. No cookies. No fingerprinting. Nothing.</p>
+            <p>Your subscription status is managed entirely by Apple through StoreKit. We have no access to your payment information, Apple ID, or any other personal details.</p>
+            <p>The global subscriber counter uses Apple's CloudKit and contains no personally identifiable information — just a number going up (or down, we don't judge).</p>
+            <p>That's it. That's the whole privacy policy.</p>
+            <p><em>Last updated: February 2026</em></p>
+        </div>
+        
+        <div class="contact-box">
+            <p>Still need help with nothing?</p>
+            <a href="mailto:mail@aaronstrickland.dev">mail@aaronstrickland.dev</a>
+        </div>
+        
+        <div class="footer">
+            <p>V0ID — © 2026 Aaron Strickland</p>
+            <p><a href="https://aaronstrickland.dev">aaronstrickland.dev</a></p>
+        </div>
+    </div>
+</body>
+</html>
