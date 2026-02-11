@@ -443,13 +443,17 @@ img { max-width: 100%; display: block; }
     padding: 8rem 0;
     border-top: 1px solid var(--border);
 }
-.oss-card {
+.oss-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
     margin: 0 3rem;
+}
+.oss-card {
     padding: 3rem;
     border: 1px solid var(--border);
     border-radius: 8px;
     background: var(--bg-light);
-    max-width: 700px;
 }
 .oss-badge {
     font-family: var(--mono);
@@ -635,7 +639,8 @@ img { max-width: 100%; display: block; }
     }
     .project--featured::before { display: none; }
     
-    .oss-card { margin: 0 1.5rem; padding: 2rem; }
+    .oss-grid { grid-template-columns: 1fr; margin: 0 1.5rem; }
+    .oss-card { padding: 2rem; }
     .stack-grid { padding: 0 1.5rem; }
     .contact-content { padding: 0 1.5rem; }
     .footer { padding: 2rem 1.5rem; }
