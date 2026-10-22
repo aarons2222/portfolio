@@ -359,7 +359,7 @@ img { max-width: 100%; display: block; }
     -webkit-text-stroke: 1px rgba(0, 255, 136, 0.3);
 }
 .project-content { flex: 1; }
-#carry-on { scroll-margin-top: 6rem; }
+#carry-on, #goose { scroll-margin-top: 6rem; }
 .project-name {
     font-size: 2rem;
     font-weight: 900;
@@ -414,6 +414,12 @@ img { max-width: 100%; display: block; }
     border-radius: 50%;
     background: var(--accent);
 }
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+}
 .project-img {
     width: 300px;
     height: 300px;
@@ -432,6 +438,22 @@ img { max-width: 100%; display: block; }
     width: min(100%, 240px);
     height: auto;
     max-height: 100%;
+    aspect-ratio: 1;
+    border-radius: 22%;
+}
+.project-img--goose a {
+    display: block;
+    width: min(100%, 240px);
+    border-radius: 22%;
+}
+.project-img--goose a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 6px;
+}
+.project-img--goose img {
+    display: block;
+    width: 100%;
+    height: auto;
     aspect-ratio: 1;
     border-radius: 22%;
 }
