@@ -359,7 +359,7 @@ img { max-width: 100%; display: block; }
     -webkit-text-stroke: 1px rgba(0, 255, 136, 0.3);
 }
 .project-content { flex: 1; }
-#carry-on, #goose, #buglane { scroll-margin-top: 6rem; }
+#carry-on, #goose, #v0id, #lumenlog, #buglane { scroll-margin-top: 6rem; }
 .project-name {
     font-size: 2rem;
     font-weight: 900;
@@ -441,17 +441,20 @@ img { max-width: 100%; display: block; }
     aspect-ratio: 1;
     border-radius: 22%;
 }
+.project-img--app-icon a,
 .project-img--goose a,
 .project-img--buglane a {
     display: block;
     width: min(100%, 240px);
     border-radius: 22%;
 }
+.project-img--app-icon a:focus-visible,
 .project-img--goose a:focus-visible,
 .project-img--buglane a:focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 6px;
 }
+.project-img--app-icon img,
 .project-img--goose img,
 .project-img--buglane img {
     display: block;
@@ -685,6 +688,7 @@ img { max-width: 100%; display: block; }
         height: 200px;
         order: -1;
     }
+    .project-img--app-icon a,
     .project-img--buglane a { width: min(100%, 200px); }
     .project--featured::before { display: none; }
     
