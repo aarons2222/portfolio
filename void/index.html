@@ -2,194 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="V0ID is a quiet timer for doing nothing. Find app support and get V0ID on the App Store.">
-    <title>V0ID — Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>V0ID — A Do Nothing Timer for iPhone &amp; Support</title>
+    <meta name="description" content="Make time for nothing with V0ID, a quiet iPhone timer. Choose a short pause, with no ads or streaks. The timer is free with an optional one-time purchase.">
+    <meta name="apple-itunes-app" content="app-id=6758951976, affiliate-data=pt=1649180&amp;ct=v0id_web_site_202611">
+    <meta name="theme-color" content="#090909">
     <link rel="canonical" href="https://aaronstrickland.dev/void/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="V0ID — A Do Nothing Timer for iPhone">
+    <meta property="og:description" content="Choose a short pause and let V0ID keep the time. No ads, feeds or streaks.">
+    <meta property="og:url" content="https://aaronstrickland.dev/void/">
+    <meta property="og:image" content="https://aaronstrickland.dev/images/v0id-icon.png">
+    <meta property="og:image:alt" content="V0ID app icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="V0ID — A Do Nothing Timer for iPhone">
+    <meta name="twitter:description" content="Choose a short pause and let V0ID keep the time. No ads, feeds or streaks.">
+    <meta name="twitter:image" content="https://aaronstrickland.dev/images/v0id-icon.png">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --bg: #000000;
-            --text: #ffffff;
-            --dim: #666666;
-            --border: #1a1a1a;
+        :root { color-scheme: dark; --bg: #090909; --text: #f5f5f3; --muted: #b0b0aa; --line: #333330; --card: #151514; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; line-height: 1.55; }
+        a { color: inherit; text-underline-offset: .2em; }
+        a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+        .skip { position: absolute; top: -5rem; left: 1rem; z-index: 2; background: #fff; color: #111; padding: .75rem 1rem; }
+        .skip:focus { top: 1rem; }
+        .wrap { width: min(1120px, calc(100% - 3rem)); margin: 0 auto; }
+        .topbar { min-height: 6rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); }
+        .brand { font-size: 1.1rem; font-weight: 800; letter-spacing: .22em; text-decoration: none; white-space: nowrap; }
+        .brand span { color: #92928b; }
+        .topbar nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.5rem); font-size: .88rem; }
+        .topbar nav a { color: #d0d0cb; text-decoration: none; padding: .75rem 0; }
+        .topbar nav a:hover { color: #fff; text-decoration: underline; }
+        .hero { min-height: 670px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr); align-items: center; gap: clamp(3rem, 8vw, 7rem); padding: 5rem 0; }
+        .eyebrow { color: #c9c9c1; font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+        h1, h2, h3, p { margin-top: 0; }
+        h1 { max-width: 10ch; margin: 1.2rem 0 1.5rem; font-size: clamp(3.5rem, 7vw, 6.8rem); line-height: .98; letter-spacing: -.065em; font-weight: 650; }
+        .hero-copy { max-width: 31rem; color: #c4c4bd; font-size: clamp(1.05rem, 1.7vw, 1.23rem); line-height: 1.7; }
+        .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; margin-top: 2rem; }
+        .button { display: inline-flex; min-height: 3.25rem; align-items: center; justify-content: center; padding: .8rem 1.35rem; border: 1px solid #f5f5f3; border-radius: 999px; background: #f5f5f3; color: #101010; font-size: .95rem; font-weight: 700; text-decoration: none; }
+        .button:hover { background: #d6d6d0; }
+        .text-link { color: #e1e1dc; font-size: .95rem; }
+        .offer-note { margin: 1rem 0 0; color: var(--muted); font-size: .84rem; }
+        .phone-area { position: relative; display: flex; justify-content: center; align-items: center; min-width: 0; }
+        .phone-area::before { position: absolute; width: min(100%, 26rem); aspect-ratio: 1; border: 1px solid #292927; border-radius: 50%; box-shadow: 0 0 0 3.5rem #101010, 0 0 0 calc(3.5rem + 1px) #242422; content: ""; }
+        .screen { position: relative; display: block; width: min(100%, 252px); height: auto; border: 1px solid #53534e; border-radius: 29px; box-shadow: 0 24px 70px #000; }
+        .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1.65rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .values span { color: #e1e1dc; font-size: .9rem; }
+        .values span::before { content: "○"; margin-right: .55rem; color: #96968f; }
+        section { scroll-margin-top: 2rem; }
+        .how { padding: 7rem 0; }
+        .section-heading { max-width: 48rem; margin: .8rem 0 1rem; font-size: clamp(2.1rem, 4vw, 3.5rem); line-height: 1.1; letter-spacing: -.045em; }
+        .section-intro { max-width: 40rem; color: var(--muted); font-size: 1.05rem; }
+        .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
+        .step { min-height: 12rem; padding: 1.6rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+        .step-number { display: block; margin-bottom: 2.2rem; color: #aaa9a1; font-size: .75rem; letter-spacing: .12em; }
+        .step h3 { margin-bottom: .55rem; font-size: 1.05rem; }
+        .step p { margin-bottom: 0; color: var(--muted); font-size: .92rem; }
+        .offer { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 3rem; border: 1px solid var(--line); border-radius: 1.25rem; background: #151514; }
+        .offer h2 { margin: .5rem 0 .75rem; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.1; letter-spacing: -.04em; }
+        .offer p { max-width: 36rem; margin-bottom: 0; color: var(--muted); }
+        .support { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 4rem; padding: 7rem 0 4rem; }
+        .support-intro p, .privacy p { color: var(--muted); }
+        .faq-item { padding: 1.4rem 0; border-top: 1px solid var(--line); }
+        .faq-item:last-child { border-bottom: 1px solid var(--line); }
+        .faq-item h3 { margin-bottom: .45rem; font-size: 1rem; }
+        .faq-item p { margin: 0; color: var(--muted); font-size: .94rem; }
+        .privacy { max-width: 45rem; padding: 2rem 0 5rem; }
+        .privacy h2 { font-size: 1.5rem; }
+        .contact { margin-top: 2.5rem; color: var(--text) !important; }
+        footer { padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+        footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+        footer p { margin: 0; }
+        @media (max-width: 740px) {
+            .wrap { width: min(100% - 2.5rem, 560px); }
+            .topbar { min-height: 5rem; }
+            .topbar nav { gap: 1rem; font-size: .8rem; }
+            .hero { min-height: 0; grid-template-columns: 1fr; gap: 4.5rem; padding: 4.5rem 0 4rem; }
+            h1 { font-size: clamp(3.35rem, 14vw, 5rem); }
+            .phone-area { padding: 1rem 0; }
+            .screen { width: min(65%, 235px); }
+            .phone-area::before { width: min(70%, 17rem); box-shadow: 0 0 0 2rem #101010, 0 0 0 calc(2rem + 1px) #242422; }
+            .values { gap: .5rem; }
+            .values span { font-size: .8rem; }
+            .values span::before { margin-right: .25rem; }
+            .how { padding: 5rem 0; }
+            .steps { grid-template-columns: 1fr; }
+            .step { min-height: 0; }
+            .step-number { margin-bottom: 1.25rem; }
+            .offer { align-items: flex-start; flex-direction: column; padding: 2rem; }
+            .support { grid-template-columns: 1fr; gap: 1.5rem; padding: 5rem 0 2rem; }
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 4rem 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 640px;
-            width: 100%;
-        }
-        
-        .logo {
-            font-size: 3rem;
-            font-weight: 900;
-            letter-spacing: 0.3em;
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-        
-        .logo span {
-            color: var(--dim);
-        }
-        
-        .tagline {
-            text-align: center;
-            color: var(--dim);
-            font-size: 0.875rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 4rem;
-        }
-        
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            margin-top: 3rem;
-        }
-        
-        h2:first-of-type {
-            margin-top: 0;
-        }
-        
-        p {
-            color: var(--dim);
-            margin-bottom: 1rem;
-            font-size: 0.9375rem;
-        }
-        
-        a {
-            color: var(--text);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-        
-        a:hover {
-            color: var(--dim);
-        }
-        
-        .faq {
-            margin-top: 3rem;
-        }
-        
-        .faq-item {
-            border-top: 1px solid var(--border);
-            padding: 1.5rem 0;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .faq-q {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 0.9375rem;
-        }
-        
-        .faq-a {
-            color: var(--dim);
-            font-size: 0.875rem;
-        }
-        
-        .contact-box {
-            margin-top: 3rem;
-            padding: 2rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .contact-box p {
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-box a {
-            font-size: 1rem;
-        }
-        
-        .footer {
-            margin-top: 4rem;
-            text-align: center;
-            color: var(--dim);
-            font-size: 0.75rem;
-        }
-        
-        .footer a {
-            color: var(--dim);
-        }
-        
-        .privacy {
-            margin-top: 3rem;
-        }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">V<span>0</span>ID</div>
-        <p class="tagline">MAKE TIME FOR NOTHING</p>
-        
-        <h2>Support</h2>
-        <p>Having an issue with V0ID? You've come to the right place. Although, to be fair, there's not much that can go wrong with nothing.</p>
-        <p><a href="https://apps.apple.com/app/id6758951976">Get V0ID on the App Store →</a></p>
-        
-        <div class="faq">
-            <div class="faq-item">
-                <div class="faq-q">The app isn't doing anything.</div>
-                <div class="faq-a">That's correct. That's the entire point.</div>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="topbar wrap">
+        <a class="brand" href="/void/" aria-label="V0ID home">V<span>0</span>ID</a>
+        <nav aria-label="V0ID navigation">
+            <a href="#how-it-works">How it works</a>
+            <a href="#support">Support</a>
+            <a href="/void/privacy/">Privacy</a>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="hero wrap" aria-labelledby="hero-title">
+            <div>
+                <p class="eyebrow">A do nothing timer for iPhone</p>
+                <h1 id="hero-title">Make time for nothing.</h1>
+                <p class="hero-copy">Choose 1, 5, 10 or 20 minutes. Put your phone down and let V0ID quietly keep the time.</p>
+                <div class="actions">
+                    <a class="button" href="https://apps.apple.com/app/apple-store/id6758951976?pt=1649180&amp;ct=v0id_web_site_202611&amp;mt=8">Download on the App Store</a>
+                    <a class="text-link" href="#how-it-works">See how it works ↓</a>
+                </div>
+                <p class="offer-note">The timer is free. Optional one-time cosmetic purchase.</p>
             </div>
-            <div class="faq-item">
-                <div class="faq-q">What is included for free?</div>
-                <div class="faq-a">The timer, session history, Live Activity, widget, Shortcuts, and optional end chime. The lifetime purchase only adds cosmetic void tones and pinned widget phrases.</div>
+            <div class="phone-area">
+                <img class="screen" src="/void/assets/timer-setup.png" width="1242" height="2688" alt="V0ID's timer screen with options for 1, 5, 10 or 20 minutes.">
             </div>
-            <div class="faq-item">
-                <div class="faq-q">Does the lifetime unlock renew?</div>
-                <div class="faq-a">No. Nothing Forever is a one-time, non-consumable purchase. You can restore it from the purchase screen.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">I want a refund.</div>
-                <div class="faq-a">Refunds are handled by Apple. Go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Try explaining to them that you want a refund for nothing.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Is my data being collected?</div>
-                <div class="faq-a">Session history and preferences are stored on your device. V0ID has no accounts, advertising, or personal analytics. When iCloud is available, only elapsed seconds are added to a shared aggregate counter.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Does V0ID work offline?</div>
-                <div class="faq-a">Yes. Sessions and history work offline. The shared aggregate counter updates only when iCloud is available.</div>
-            </div>
+        </section>
+        <div class="values wrap" aria-label="V0ID has no ads, feeds or streaks">
+            <span>No ads</span><span>No feeds</span><span>No streaks</span>
         </div>
-        
-        <div class="privacy" id="privacy">
+        <section class="how wrap" id="how-it-works">
+            <p class="eyebrow">A little space in your day</p>
+            <h2 class="section-heading">Nothing to achieve.<br>Just time to be.</h2>
+            <p class="section-intro">No score to improve and no routine to keep up. Pick a pause that fits, then come back when you're ready.</p>
+            <div class="steps">
+                <article class="step"><span class="step-number">01 / CHOOSE</span><h3>Pick your time</h3><p>Choose a one, five, ten or twenty-minute session.</p></article>
+                <article class="step"><span class="step-number">02 / PAUSE</span><h3>Put the phone down</h3><p>The timer keeps going even when V0ID is in the background.</p></article>
+                <article class="step"><span class="step-number">03 / RETURN</span><h3>Make it yours</h3><p>Hide the countdown if you prefer, and choose whether to hear an end chime.</p></article>
+            </div>
+        </section>
+        <section class="offer wrap" aria-labelledby="offer-title">
+            <div>
+                <p class="eyebrow">Simple by design</p>
+                <h2 id="offer-title">The timer is free.</h2>
+                <p>Sessions, history, the widget and Live Activity are included. An optional one-time purchase adds cosmetic void tones and a favourite widget phrase.</p>
+            </div>
+            <a class="button" href="https://apps.apple.com/app/apple-store/id6758951976?pt=1649180&amp;ct=v0id_web_site_202611&amp;mt=8">Get V0ID for iPhone</a>
+        </section>
+        <section class="support wrap" id="support">
+            <div class="support-intro">
+                <p class="eyebrow">Here if you need us</p>
+                <h2 class="section-heading">Support for doing nothing.</h2>
+                <p>Having an issue with V0ID? You've come to the right place. Although, to be fair, there's not much that can go wrong with nothing.</p>
+            </div>
+            <div class="faq" aria-label="Frequently asked questions">
+                <div class="faq-item"><h3>The app isn't doing anything.</h3><p>That's correct. That's the entire point.</p></div>
+                <div class="faq-item"><h3>What is included for free?</h3><p>The timer, session history, Live Activity, widget, Shortcuts, and optional end chime. The lifetime purchase only adds cosmetic void tones and pinned widget phrases.</p></div>
+                <div class="faq-item"><h3>Does the lifetime unlock renew?</h3><p>No. Nothing Forever is a one-time, non-consumable purchase. You can restore it from the purchase screen.</p></div>
+                <div class="faq-item"><h3>I want a refund.</h3><p>Refunds are handled by Apple. Go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Try explaining to them that you want a refund for nothing.</p></div>
+                <div class="faq-item"><h3>Is my data being collected?</h3><p>Session history and preferences are stored on your device. V0ID has no accounts, advertising, or personal analytics. When iCloud is available, only elapsed seconds are added to a shared aggregate counter.</p></div>
+                <div class="faq-item"><h3>Does V0ID work offline?</h3><p>Yes. Sessions and history work offline. The shared aggregate counter updates only when iCloud is available.</p></div>
+            </div>
+        </section>
+        <section class="privacy wrap" id="privacy">
             <h2>Privacy Policy</h2>
             <p>V0ID stores session dates, durations, totals, and preferences on your device. It has no V0ID accounts, advertising, personal analytics, tracking SDKs, cookies, or fingerprinting.</p>
             <p>The optional one-time purchase is handled by Apple through StoreKit. V0ID can read whether that entitlement is active, but has no access to your payment details or Apple ID.</p>
             <p>When iCloud is available, completed time is added to a shared CloudKit total. No session history, name, email address, or V0ID profile is sent with that aggregate number.</p>
             <p>Read the <a href="/void/privacy/">full privacy policy</a>.</p>
             <p><em>Last updated: September 2026</em></p>
-        </div>
-        
-        <div class="contact-box">
-            <p>Still need help with nothing?</p>
-            <a href="mailto:mail@aaronstrickland.dev">mail@aaronstrickland.dev</a>
-        </div>
-        
-        <div class="footer">
-            <p>V0ID — © 2026 Aaron Strickland</p>
-            <p><a href="/void/privacy/">Privacy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a> · <a href="https://aaronstrickland.dev">aaronstrickland.dev</a></p>
-        </div>
-    </div>
+            <p class="contact">Still need help with nothing? <a href="mailto:mail@aaronstrickland.dev">mail@aaronstrickland.dev</a></p>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap"><p>V0ID — © 2026 Aaron Strickland</p><p><a href="/void/privacy/">Privacy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a> · <a href="https://aaronstrickland.dev">aaronstrickland.dev</a></p></div>
+    </footer>
 </body>
 </html>
